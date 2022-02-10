@@ -1,0 +1,47 @@
+<link rel="stylesheet" href="/css/post.css">
+
+<div class="container">
+    <div class="row" style="padding-top: 120px; padding-bottom:100px;">
+        <div class="col-lg-7 col-sm-7 col-xs-12" id="feed-posts">
+            <div id="posts-list-container">
+                <ul>
+                    <% for(post of posts){ %>
+        
+                        <%- include('_post') -%>
+        
+                    <% } %>
+                </ul>
+            </div>
+        </div>
+        <div class="col-lg-5 col-sm-5 col-xs-12 card" style="position: fixed;
+        right: 0; text-align:center;">
+            <form action="/posts/createPost" id="new-post-form" method="POST" enctype="multipart/form-data">
+                <div class="mb-3">
+                    <label for="exampleInputEmail1" class="form-label">content</label>
+                    <textarea name="content" class="form-control" cols="30" rows="5" placeholder="Type here..." required></textarea>
+                </div>
+                <div class="mb-3">
+                    <label for="exampleInputEmail1" class="form-label">Post Image</label>
+                    <input type="file" class="form-control" name="postpic" placeholder="post-picture" ><br>
+                </div>
+                <div class="mb-3">
+                    <input type="submit" class="form-control" value="post">
+                </div>
+            </form>
+        </div>
+    </div>
+</div>
+
+<!-- <div id="post">
+    <section id="feed-posts" style="padding-top: 140px;">
+        <h4>Posts</h4>
+        
+    
+        
+        
+        
+    </section>
+</div> -->
+
+
+<script src="/js/home_posts.js"></script>

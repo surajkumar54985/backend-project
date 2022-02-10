@@ -1,0 +1,15 @@
+<link rel="stylesheet" href="/css/home.css">
+
+<div id="home-container">
+    <section id="user-friends" style="padding-top: 90px;">
+        <h4>Friends</h4>
+        <% for(u of all_users){%>
+            <p>
+                <a href="/users/profile/<%= u.id %>"><%= u.name %></a>
+            </p>
+        <% } %>
+    </section>
+</div>
+
+<script src="/js/home_posts.js"></script>
+
